@@ -27,7 +27,7 @@ const ProtectedRoute = ({ component: Component, ...rest }) => {
   React.useEffect(() => {
     checkLoginStatus()
     //eslint-disable-next-line
-  }, [])
+  }, [user])
 
   return <Component {...rest} />
 }
