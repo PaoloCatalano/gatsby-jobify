@@ -7,25 +7,21 @@ import {
   ProtectedRoute,
   AllJobs,
   Profile,
-  SharedLayout,
   Stats,
   AddJob,
 } from "../components"
 
 export default function app({ serverData }) {
-  console.log(serverData)
   return (
     <Router>
-      {/* <SharedLayout ????? > */}
-      <ProtectedRoute path="/">
-        <SharedLayout path="/">
-          <Stats path="/" />
-          <AllJobs path="all-jobs" />
-          <AddJob path="add-job" />
-          <Profile path="profile" serverData={serverData} />
-          <Error path="*" />
-        </SharedLayout>
-      </ProtectedRoute>
+      <ProtectedRoute path="/" component={Stats} />
+      <ProtectedRoute path="/all-jobs" component={AllJobs} />
+      <ProtectedRoute path="/add-job" component={AddJob} />
+      <ProtectedRoute
+        path="/profile"
+        component={Profile}
+        serverData={serverData}
+      />
       <Register path="/register" />
       <LandingComponent path="/Landing" />
       <Error path="*" />

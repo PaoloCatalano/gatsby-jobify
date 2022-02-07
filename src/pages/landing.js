@@ -25,6 +25,18 @@ const Landing = () => {
           <Link to="/register" className="btn btn-hero">
             Login/Register
           </Link>
+          <Link to="/page-2" className="btn btn-hero">
+            Page 2
+          </Link>
+          <Link to="/using-ssr" className="btn btn-hero">
+            Using SSR
+          </Link>
+          <Link to="/using-dsg" className="btn btn-hero">
+            Using DSG
+          </Link>
+          <Link to="/using-typescript" className="btn btn-hero">
+            Using Typescript
+          </Link>
         </div>
         <img src={main} alt="job hunt" className="img main-img" />
       </div>

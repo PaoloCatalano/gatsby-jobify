@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import { useAppContext } from "../context/appContext"
-import { StatsContainer, Loading, ChartsContainer } from "."
+import { StatsContainer, Loading, ChartsContainer, SharedLayout } from "."
 
 const Stats = () => {
   const { showStats, isLoading, monthlyApplications } = useAppContext()
@@ -10,13 +10,17 @@ const Stats = () => {
     // eslint-disable-next-line
   }, [])
   if (isLoading) {
-    return <Loading center />
+    return (
+      <SharedLayout>
+        <Loading center />
+      </SharedLayout>
+    )
   }
   return (
-    <>
+    <SharedLayout>
       <StatsContainer />
       {monthlyApplications?.length > 0 && <ChartsContainer />}
-    </>
+    </SharedLayout>
   )
 }
 
