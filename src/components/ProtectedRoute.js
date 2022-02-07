@@ -18,10 +18,17 @@ import { useAppContext } from "../context/appContext"
 const ProtectedRoute = ({ component: Component, ...rest }) => {
   const { user } = useAppContext()
 
-  if (!user) {
-    navigate("/landing")
-    return null
+  const checkLoginStatus = () => {
+    if (!user) {
+      navigate("/landing")
+    }
   }
+
+  React.useEffect(() => {
+    checkLoginStatus()
+    //eslint-disable-next-line
+  }, [])
+
   return <Component {...rest} />
 }
 export default ProtectedRoute
