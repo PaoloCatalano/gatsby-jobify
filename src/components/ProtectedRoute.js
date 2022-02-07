@@ -20,7 +20,7 @@ const ProtectedRoute = ({ component: Component, ...rest }) => {
 
   const checkLoginStatus = () => {
     if (!user) {
-      navigate("/landing")
+      navigate("/dashboard/landing")
     }
   }
 

@@ -13,7 +13,7 @@ import {
 
 export default function app({ serverData }) {
   return (
-    <Router>
+    <Router basepath="dashboard">
       <ProtectedRoute path="/" component={Stats} />
       <ProtectedRoute path="/all-jobs" component={AllJobs} />
       <ProtectedRoute path="/add-job" component={AddJob} />
@@ -23,7 +23,7 @@ export default function app({ serverData }) {
         serverData={serverData}
       />
       <Register path="/register" />
-      <LandingComponent path="/Landing" />
+      <LandingComponent path="/landing" />
       <Error path="*" />
     </Router>
   )
