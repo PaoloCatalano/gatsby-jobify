@@ -2,6 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import LoginExample from "../components/LoginExample"
 
 const UsingSSR = ({ serverData = { count: 0 } }) => {
   return (
@@ -16,7 +17,10 @@ const UsingSSR = ({ serverData = { count: 0 } }) => {
           </a>
         </p>
       </div>
-      <p>Welcome to a server side rendered page with a random dog photo</p>
+
+      {/* LoginExample is blocked by CORS! */}
+      <LoginExample />
+
       <p>
         To learn more, head over to our{" "}
         <a href="https://www.gatsbyjs.com/docs/reference/rendering-options/server-side-rendering/">

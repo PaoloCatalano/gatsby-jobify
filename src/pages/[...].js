@@ -24,7 +24,6 @@ export default function app({ serverData }) {
       />
       <Register path="/register" />
       <LandingComponent path="/landing" />
-      <Error path="*" />
     </Router>
   )
 }

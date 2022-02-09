@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
-
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
@@ -9,7 +9,9 @@ const SecondPage = () => (
     <Seo title="Page two" />
     <h1>Hi from the second page</h1>
     <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    <AniLink swipe top="exit" direction="down" entryOffset={80} to="/using-ssr">
+      Swipe to SSR
+    </AniLink>
   </Layout>
 )
 

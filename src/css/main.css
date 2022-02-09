@@ -297,3 +297,13 @@ ul {
 .full-page {
   min-height: 100vh;
 }
+
+.anilink-bg {
+  background-image: url("https://source.unsplash.com/random");
+  background-position: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-origin: padding-box;
+  background-clip: content-box;
+  background-color: white;
+}
